@@ -28,8 +28,8 @@ Field batteryField = FIELD_DRAWTEXT();
 Field timeField = FIELD_DRAWTEXT();
 Field speedField = FIELD_READONLY_UINT("Speed", &l3_vars.ui16_wheel_speed_x10, "kph", .div_digits = 1, .hide_fraction = true);
 Field assistLevelField = FIELD_READONLY_UINT("Assist", &l3_vars.ui8_assist_level, "");
-Field maxPowerField = FIELD_READONLY_UINT("Motor Power", &l3_vars.ui16_battery_power_filtered, "W");
-Field humanPowerField = FIELD_READONLY_UINT("Human Power", &l3_vars.ui16_pedal_power_filtered, "W");
+Field maxPowerField = FIELD_READONLY_UINT("Motor Pwr", &l3_vars.ui16_battery_power_filtered, "W");
+Field humanPowerField = FIELD_READONLY_UINT("Human Pwr", &l3_vars.ui16_pedal_power_filtered, "W");
 //Field whiteFillField = { .variant = FieldFill };
 //Field meshFillField = { .variant = FieldMesh };
 Field warnField = FIELD_DRAWTEXT();
@@ -164,7 +164,7 @@ Screen mainScreen = {
         .x = 0, .y = -3,
         .width = 0, .height = 19,
         .field = &maxPowerField,
-        .font = &FONT_10X16,
+        .font = &MY_FONT_NUM_10X16,
         .modifier = ModNoLabel,
         .border = BorderBottom
     },
